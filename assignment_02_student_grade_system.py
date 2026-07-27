@@ -12,30 +12,7 @@
 #   Score 70 – 79   →  Grade B
 #   Score 60 – 69   →  Grade C
 #   Score 50 – 59   →  Grade D
-#   Score below 50  →  Grade F
-def get_grade(score):
-    if score < 0 or score > 100:
-        return None
-    elif score >= 80:
-        return 'A'
-    elif score >= 70:
-        return 'B'
-    elif score >= 60:
-        return 'C'
-    elif score >= 50:
-        return 'D'
-    else:
-        return 'F'
-    def main():
-        score = int(input("Enter student score (0-100): "))
-        grade = get_grade(score)
-        if grade is None:
-            print("Error: Score must be between 0 and 100.")
-        else:
-            print(f"Grade: {grade}")
-            if __name__ == "__main__":
-                main()
-# -----------------------------------------------------------------------------
+#   Score below 50  →  Grade F-----------------------------------------------------------------------------
 # EXPECTED INPUT / OUTPUT EXAMPLES
 # -----------------------------------------------------------------------------
 #
@@ -65,3 +42,26 @@ def get_grade(score):
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+
+def get_grade(score):
+    if score < 0 or score > 100:
+        return None
+    elif score >= 80:
+        return 'A'
+    elif score >= 70:
+        return 'B'
+    elif score >= 60:
+        return 'C'
+    elif score >= 50:
+        return 'D'
+    else:
+        return 'F'
+    def main():
+        score = int(input("Enter student score (0-100): "))
+        grade = get_grade(score)
+        if grade is None:
+            print("Error: Score must be between 0 and 100.")
+        else:
+            print(f"Grade: {grade}")
+            if __name__ == "__main__":
+                main()
