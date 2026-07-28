@@ -49,3 +49,33 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def print_fibonacci_sequence(n):
+    first = 0
+    second = 1
+    print("Fibonacci sequence:", end=" ")
+    for i in range(n):
+        print(first, end=" ")
+        next_term = first + second
+        first = second
+        second = next_term
+    print()  # for newline after the sequence
+def is_fibonacci_number(num):
+    first = 0
+    second = 1
+    while first < num:
+        next_term = first + second
+        first = second
+        second = next_term
+    if first == num:
+        print(num, "is a Fibonacci number.")
+    else:
+        print(num, "is NOT a Fibonacci number.")
+
+terms = int(input("How many terms? "))
+if terms <= 0:
+    print("Error: Number of terms must be a positive integer.") 
+else:
+    print_fibonacci_sequence(terms)
+
+num_to_check = int(input("Enter a number to check: "))
+is_fibonacci_number(num_to_check)
