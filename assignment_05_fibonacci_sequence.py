@@ -58,7 +58,7 @@ def print_fibonacci_sequence(n):
         next_term = first + second
         first = second
         second = next_term
-    print()  # for newline after the sequence
+    print()  
 def is_fibonacci_number(num):
     first = 0
     second = 1
